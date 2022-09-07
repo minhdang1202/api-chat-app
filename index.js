@@ -111,6 +111,8 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(8800, () => {
+const POST = process.env.POST || 8800;
+
+server.listen(POST, () => {
   console.log("Backend is running");
 });
